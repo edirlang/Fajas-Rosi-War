@@ -1,7 +1,14 @@
 RailsApp::Application.routes.draw do
   resources :usuarios
+  
+  get "sessions/new"
 
-  root :to => 'usuarios#index'
+  get "sessions/usuarios" => 'usuarios#index'
+  resources :sessions, only: [:new, :create, :destroy]
+  get 'signin'  => 'sessions#new'
+  get 'signout' => 'sessions#destroy'
+
+  root 'sessions#new'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

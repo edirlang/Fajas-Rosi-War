@@ -1,40 +1,39 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Cedula:</b>
+  <strong>Cedula:</strong>
   <%= @usuario.cedula %>
 </p>
 
 <p>
-  <b>Nombre:</b>
+  <strong>Nombre:</strong>
   <%= @usuario.nombre %>
 </p>
 
 <p>
-  <b>Ciudad:</b>
+  <strong>Ciudad:</strong>
   <%= @usuario.ciudad %>
 </p>
 
 <p>
-  <b>Direccion:</b>
+  <strong>Direccion:</strong>
   <%= @usuario.direccion %>
 </p>
 
 <p>
-  <b>Telefono:</b>
+  <strong>Telefono:</strong>
   <%= @usuario.telefono %>
 </p>
 
 <p>
-  <b>Email:</b>
+  <strong>Email:</strong>
   <%= @usuario.email %>
 </p>
 
 <p>
-  <b>Contrasena:</b>
+  <strong>Contrasena:</strong>
   <%= @usuario.contrasena %>
 </p>
-
 
 <%= link_to 'Edit', edit_usuario_path(@usuario) %> |
 <%= link_to 'Back', usuarios_path %>

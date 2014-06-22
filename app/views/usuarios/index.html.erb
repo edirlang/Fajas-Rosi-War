@@ -1,35 +1,39 @@
 <h1>Listing usuarios</h1>
 
 <table>
-  <tr>
-    <th>Cedula</th>
-    <th>Nombre</th>
-    <th>Ciudad</th>
-    <th>Direccion</th>
-    <th>Telefono</th>
-    <th>Email</th>
-    <th>Contrasena</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <thead>
+    <tr>
+      <th>Cedula</th>
+      <th>Nombre</th>
+      <th>Ciudad</th>
+      <th>Direccion</th>
+      <th>Telefono</th>
+      <th>Email</th>
+      <th>Contrasena</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
 
-<% @usuarios.each do |usuario| %>
-  <tr>
-    <td><%= usuario.cedula %></td>
-    <td><%= usuario.nombre %></td>
-    <td><%= usuario.ciudad %></td>
-    <td><%= usuario.direccion %></td>
-    <td><%= usuario.telefono %></td>
-    <td><%= usuario.email %></td>
-    <td><%= usuario.contrasena %></td>
-    <td><%= link_to 'Show', usuario %></td>
-    <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
-    <td><%= link_to 'Destroy', usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+  <tbody>
+    <% @usuarios.each do |usuario| %>
+      <tr>
+        <td><%= usuario.cedula %></td>
+        <td><%= usuario.nombre %></td>
+        <td><%= usuario.ciudad %></td>
+        <td><%= usuario.direccion %></td>
+        <td><%= usuario.telefono %></td>
+        <td><%= usuario.email %></td>
+        <td><%= usuario.contrasena %></td>
+        <td><%= link_to 'Show', usuario %></td>
+        <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
+        <td><%= link_to 'Destroy', usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
-<br />
+<br>
 
 <%= link_to 'New Usuario', new_usuario_path %>
