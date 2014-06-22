@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="">
 	<head>
-		<title>Title Page</title>
+		<title>FAJAS ROSY WAR</title>
 		<meta charset="UTF-8">
 		<meta name=description content="">
 		<meta name=viewport content="width=device-width, initial-scale=1">
@@ -26,11 +26,13 @@
 					<p>es algo</p>		
 				</div>
 				<div class="col-ms-3 col-xs-3 col-md-3 col-lg-3">
+					<h2>Iniciar sesion</h2>
 					<% if flash[:notice] %>
-						<div>
+						<div class="alert alert-danger">
 							<%= flash[:notice] %>
 						</div>
-					<% end %>
+					<% end %> 	
+					
 					<%= yield %>
 				</div>
 			</div>

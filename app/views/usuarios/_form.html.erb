@@ -11,35 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :cedula %><br>
-    <%= f.text_field :cedula %>
+    <input type="text" class="form-control" name="cedula"/>
   </div>
   <div class="field">
     <%= f.label :nombre %><br>
-    <%= f.text_field :nombre %>
+    <input type="text" class="form-control" name="nombre"/>
   </div>
   <div class="field">
     <%= f.label :ciudad %><br>
-    <%= f.text_field :ciudad %>
+    <input type="text" class="form-control" name="ciudad"/>
   </div>
   <div class="field">
     <%= f.label :direccion %><br>
-    <%= f.text_field :direccion %>
+    <input type="text" class="form-control" name="direccion"/>
   </div>
   <div class="field">
     <%= f.label :telefono %><br>
-    <%= f.text_field :telefono %>
+    <input type="tel" class="form-control" name="telefono"/>
   </div>
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <input type="email" class="form-control" name="email"/>
   </div>
   <div class="field">
     <%= f.label :contrasena %><br>
-    <%= f.text_field :contrasena %>
+    <input type="password" class="form-control" name="contrasena"/>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <input type="submit" class="btn btn-primary" value="Enviar">
   </div>
 <% end %>

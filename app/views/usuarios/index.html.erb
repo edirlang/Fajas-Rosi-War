@@ -1,39 +1,38 @@
-<h1>Listing usuarios</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Cedula</th>
-      <th>Nombre</th>
-      <th>Ciudad</th>
-      <th>Direccion</th>
-      <th>Telefono</th>
-      <th>Email</th>
-      <th>Contrasena</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @usuarios.each do |usuario| %>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <h1 class="text-center">Usuarios</h1>
+  
+  <table class="table table-striped">
+    <thead>
       <tr>
-        <td><%= usuario.cedula %></td>
-        <td><%= usuario.nombre %></td>
-        <td><%= usuario.ciudad %></td>
-        <td><%= usuario.direccion %></td>
-        <td><%= usuario.telefono %></td>
-        <td><%= usuario.email %></td>
-        <td><%= usuario.contrasena %></td>
-        <td><%= link_to 'Show', usuario %></td>
-        <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
-        <td><%= link_to 'Destroy', usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Cedula</th>
+        <th>Nombre</th>
+        <th>Ciudad</th>
+        <th>Direccion</th>
+        <th>Telefono</th>
+        <th>Email</th>
+        <th>Contrasena</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Usuario', new_usuario_path %>
+    </thead>
+    <tbody>
+      <% @usuarios.each do |usuario| %>
+        <tr>
+          <td><%= usuario.cedula %></td>
+          <td><%= usuario.nombre %></td>
+          <td><%= usuario.ciudad %></td>
+          <td><%= usuario.direccion %></td>
+          <td><%= usuario.telefono %></td>
+          <td><%= usuario.email %></td>
+          <td><%= usuario.contrasena %></td>
+          <td><%= link_to 'Ver', usuario %></td>
+          <td><%= link_to 'Editar', edit_usuario_path(usuario) %></td>
+          <td><%= link_to 'Eliminar', usuario, method: :delete, data: { confirm: 'Esta segura de eliminar la cuenta?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+</div>

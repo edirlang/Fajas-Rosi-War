@@ -1,39 +1,43 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+    <p>
+      <strong>Cedula:</strong>
+      <%= @usuario.cedula %>
+    </p>
 
-<p>
-  <strong>Cedula:</strong>
-  <%= @usuario.cedula %>
-</p>
+    <p>
+      <strong>Nombre:</strong>
+      <%= @usuario.nombre %>
+    </p>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @usuario.nombre %>
-</p>
+    <p>
+      <strong>Ciudad:</strong>
+      <%= @usuario.ciudad %>
+    </p>
 
-<p>
-  <strong>Ciudad:</strong>
-  <%= @usuario.ciudad %>
-</p>
+    <p>
+      <strong>Direccion:</strong>
+      <%= @usuario.direccion %>
+    </p>
 
-<p>
-  <strong>Direccion:</strong>
-  <%= @usuario.direccion %>
-</p>
+    <p>
+      <strong>Telefono:</strong>
+      <%= @usuario.telefono %>
+    </p>
 
-<p>
-  <strong>Telefono:</strong>
-  <%= @usuario.telefono %>
-</p>
+    <p>
+      <strong>Email:</strong>
+      <%= @usuario.email %>
+    </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @usuario.email %>
-</p>
+    <p>
+      <strong>Contrasena:</strong>
+      <%= @usuario.contrasena %>
+    </p>
 
-<p>
-  <strong>Contrasena:</strong>
-  <%= @usuario.contrasena %>
-</p>
-
-<%= link_to 'Edit', edit_usuario_path(@usuario) %> |
-<%= link_to 'Back', usuarios_path %>
+    <%= link_to 'Editar', edit_usuario_path(@usuario) %> |
+    <%= link_to 'Atras', usuarios_path %>
+    
+  </div>
+</div>
