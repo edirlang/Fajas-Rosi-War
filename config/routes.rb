@@ -1,10 +1,11 @@
 RailsApp::Application.routes.draw do
   resources :usuarios
-  
+
   get "sessions/new"
 
   get "sessions/usuarios" => 'usuarios#index'
   resources :sessions, only: [:new, :create, :destroy]
+  get "sessions/crear-usuario" => 'sessions#CrearUsuario'
   get 'signin'  => 'sessions#new'
   get 'signout' => 'sessions#destroy'
 

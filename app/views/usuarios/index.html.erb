@@ -11,8 +11,6 @@
         <th>Direccion</th>
         <th>Telefono</th>
         <th>Email</th>
-        <th>Contrasena</th>
-        <th></th>
         <th></th>
         <th></th>
       </tr>
@@ -26,10 +24,8 @@
           <td><%= usuario.direccion %></td>
           <td><%= usuario.telefono %></td>
           <td><%= usuario.email %></td>
-          <td><%= usuario.contrasena %></td>
           <td><%= link_to 'Ver', usuario %></td>
           <td><%= link_to 'Editar', edit_usuario_path(usuario) %></td>
-          <td><%= link_to 'Eliminar', usuario, method: :delete, data: { confirm: 'Esta segura de eliminar la cuenta?' } %></td>
         </tr>
       <% end %>
     </tbody>
