@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     
   	if usuario = Usuario.find_by( cedula: params[:cedula], contrasena: params[:contrasena])
   		session[:current_user_id] = usuario.id
-  		redirect_to  usuarios_path
+  		redirect_to  presentacion_path
   	else
       redirect_to root_url
       flash[:notice] = "Login Incorecto"

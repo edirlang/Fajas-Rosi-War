@@ -1,6 +1,11 @@
 RailsApp::Application.routes.draw do
+  resources :materiales
+
+  resources :productos
+
   resources :usuarios
 
+  get 'presentacion' => 'presentacion#index'
   get "sessions/new"
 
   get "sessions/usuarios" => 'usuarios#index'
