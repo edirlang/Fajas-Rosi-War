@@ -1,6 +1,6 @@
 class CreateUsuarios < ActiveRecord::Migration
   def change
-    create_table :usuarios do |t|
+    create table :usuarios do |t|
       t.string :cedula
       t.string :nombre
       t.string :ciudad

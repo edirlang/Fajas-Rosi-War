@@ -1,6 +1,6 @@
 class UsuariosController < ApplicationController
   before_action :set_usuario, only: [:show, :edit, :update, :destroy]
-
+  before_action :validacion
   # GET /usuarios
   # GET /usuarios.json
   def index
@@ -15,6 +15,7 @@ class UsuariosController < ApplicationController
   # GET /usuarios/new
   def new
     @usuario = Usuario.new
+    render :layout => 'nuevo' 
   end
 
   # GET /usuarios/1/edit

@@ -1,5 +1,6 @@
 class ProductosController < ApplicationController
   before_action :set_producto, only: [:show, :edit, :update, :destroy]
+  before_action :validacion
 
   # GET /productos
   # GET /productos.json
@@ -71,4 +72,5 @@ class ProductosController < ApplicationController
     def producto_params
       params.require(:producto).permit(:id_producto, :descripcion, :nombre, :cantidad, :precio)
     end
+
 end

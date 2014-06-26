@@ -1,6 +1,6 @@
 class MaterialesController < ApplicationController
   before_action :set_materiale, only: [:show, :edit, :update, :destroy]
-
+  before_action :validacion
   # GET /materiales
   # GET /materiales.json
   def index
