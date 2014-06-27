@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cedula: MyString
+  nombre: MyString
+  ciudad: MyString
+  direccion: MyString
+  telefono: MyString
+  email: MyString
+  contrasena: MyString
+
+two:
+  cedula: MyString
+  nombre: MyString
+  ciudad: MyString
+  direccion: MyString
+  telefono: MyString
+  email: MyString
+  contrasena: MyString

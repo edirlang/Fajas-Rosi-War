@@ -1,4 +1,35 @@
 RailsApp::Application.routes.draw do
+  get "cliente/index"
+  get "cliente/MisProductos"
+  get "cliente/MiCuenta"
+  #Controlador de materiales
+
+  resources :materiales
+
+  #Controlador de Productos
+  resources :productos
+
+  #Controlador de Usuario
+  resources :usuarios
+
+  #Controlador de Inicio de session
+  resources :sessions, only: [:new, :create, :destroy]
+  get "sessions/new"
+  get "sessions/crear-usuario" => 'sessions#CrearUsuario'
+  get 'signin'  => 'sessions#new'
+  get 'signout' => 'sessions#destroy'
+
+  #Controlador cliente
+  get "cliente" => 'cliente#index'
+  get "MisProductos" => 'cliente#MisProductos'
+  get "MiCuenta" => 'cliente#MiCuenta'
+  get "Carrito" => 'cliente#Carrito'
+
+  #Controlador de presentacion de la empresa
+  get 'presentacion' => 'presentacion#index'
+  
+
+  root 'sessions#new'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

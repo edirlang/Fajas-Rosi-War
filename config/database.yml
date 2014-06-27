@@ -27,10 +27,22 @@ defaults: &defaults
   <<: *<%= ENV['RAILS_DB'] || "sqlite" %>
 
 development:
-  <<: *defaults
+  adapter: mysql2
+  encoding: utf8
+  database: Fajas-Rosi_development
+  pool: 5
+  username: root
+  password: 1994edi
+  socket: /var/run/mysqld/mysqld.sock
 
 test: &test
-  <<: *defaults
+  adapter: mysql2
+  encoding: utf8
+  database: Fajas-Rosi_test
+  pool: 5
+  username: root
+  password: 1994edi
+  socket: /var/run/mysqld/mysqld.sock
 
 production:
   <<: *defaults

@@ -1,0 +1,45 @@
+<%= form_for(@usuario) do |f| %>
+  <% if @usuario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@usuario.errors.count, "error") %> prohibited this usuario from being saved:</h2>
+
+      <ul>
+      <% @usuario.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :cedula %><br>
+    <input type="text" class="form-control" name="cedula"/>
+  </div>
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <input type="text" class="form-control" name="nombre"/>
+  </div>
+  <div class="field">
+    <%= f.label :ciudad %><br>
+    <input type="text" class="form-control" name="ciudad"/>
+  </div>
+  <div class="field">
+    <%= f.label :direccion %><br>
+    <input type="text" class="form-control" name="direccion"/>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br>
+    <input type="tel" class="form-control" name="telefono"/>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <input type="email" class="form-control" name="email"/>
+  </div>
+  <div class="field">
+    <%= f.label :contrasena %><br>
+    <input type="password" class="form-control" name="contrasena"/>
+  </div>
+  <div class="actions">
+    <input type="submit" class="btn btn-primary" value="Enviar">
+  </div>
+<% end %>

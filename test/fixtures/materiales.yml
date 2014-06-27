@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id_material: MyString
+  nombre: MyString
+  descripcion: MyText
+  cantidad: 1
+
+two:
+  id_material: MyString
+  nombre: MyString
+  descripcion: MyText
+  cantidad: 1
