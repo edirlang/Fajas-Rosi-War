@@ -20,6 +20,7 @@ RailsApp::Application.routes.draw do
   get 'signout' => 'sessions#destroy'
 
   #Controlador cliente
+  get "MiCuenta/edit" => 'cliente#edit'
   get "cliente" => 'cliente#index'
   get "MisProductos" => 'cliente#MisProductos'
   get "MiCuenta" => 'cliente#MiCuenta'

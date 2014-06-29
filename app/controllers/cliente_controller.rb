@@ -1,5 +1,7 @@
 class ClienteController < ApplicationController
-  
+  before_action :validacion, only: [:edit, :index]
+  before_action :consultar, only: [:MiCuenta, :edit]
+
   def index
   	
   end
@@ -13,6 +15,16 @@ class ClienteController < ApplicationController
   end
 
   def MiCuenta
+    
+  end
 
+  def edit
+
+  end
+
+  private
+
+  def consultar
+    @usuario = Usuario.find(session[:current_user_id])
   end
 end

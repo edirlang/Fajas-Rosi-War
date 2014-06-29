@@ -29,7 +29,7 @@ class UsuariosController < ApplicationController
 
     respond_to do |format|
       if @usuario.save
-        format.html { redirect_to @usuario, notice: 'Su cuenta a sido creada.' }
+        format.html { redirect_to sessions_path, notice: 'Su cuenta a sido creada.' }
         format.json { render action: 'show', status: :created, location: @usuario }
       else
         format.html { render action: 'new' }
