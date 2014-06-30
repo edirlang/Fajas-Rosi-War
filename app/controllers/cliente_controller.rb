@@ -3,7 +3,7 @@ class ClienteController < ApplicationController
   before_action :consultar, only: [:MiCuenta, :edit]
 
   def index
-  	
+  	@productos = Producto.all
   end
 
   def MisProductos

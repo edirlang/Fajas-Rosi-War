@@ -14,6 +14,9 @@
   <dd><%= @producto.cantidad %></dd>
   <dt><strong><%= model_class.human_attribute_name(:precio) %>:</strong></dt>
   <dd><%= @producto.precio %></dd>
+  <dt><strong>Foto:</strong></dt>
+  <dd><%= image_tag @producto.foto_path %></dd>
+
 </dl>
 
 <div class="form-actions">

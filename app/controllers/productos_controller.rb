@@ -26,7 +26,6 @@ class ProductosController < ApplicationController
   # POST /productos.json
   def create
     @producto = Producto.new(producto_params)
-
     respond_to do |format|
       if @producto.save
         format.html { redirect_to @producto, notice: 'Producto was successfully created.' }
@@ -43,7 +42,8 @@ class ProductosController < ApplicationController
   def update
     respond_to do |format|
       if @producto.update(producto_params)
-        format.html { redirect_to @producto, notice: 'Producto was successfully updated.' }
+         
+        format.html { redirect_to @producto, notice: "Producto was successfully updated."+ "#{params[:foto]}" }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -66,6 +66,9 @@ class ProductosController < ApplicationController
     render :layout => 'cliente'
   end
 
+  
+
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_producto
@@ -74,7 +77,6 @@ class ProductosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def producto_params
-      params.require(:producto).permit(:id_producto, :descripcion, :nombre, :cantidad, :precio)
+      params.require(:producto).permit(:id_producto, :descripcion, :nombre, :cantidad, :precio, :foto)
     end
-
 end

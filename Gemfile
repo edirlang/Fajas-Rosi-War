@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 gem 'devise'
 gem 'twitter-bootstrap-rails'
+gem 'paperclip'
 
 # Use mysql as the database for Active Record
 gem 'mysql2'
