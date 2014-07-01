@@ -22,6 +22,13 @@ class ClienteController < ApplicationController
 
   end
 
+  def comprar
+    respond_to do |format|
+      @productos = Producto.all
+      format.html { render action: 'index'}
+    end
+  end
+
   private
 
   def consultar

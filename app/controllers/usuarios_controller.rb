@@ -20,19 +20,20 @@ class UsuariosController < ApplicationController
 
   # GET /usuarios/1/edit
   def edit
+    
   end
 
   # POST /usuarios
   # POST /usuarios.json
   def create
     @usuario = Usuario.new(usuario_params)
-
     respond_to do |format|
       if @usuario.save
+
         format.html { redirect_to new_sessions_path, notice: 'Su cuenta a sido creada.' }
         format.json { render action: 'show', status: :created, location: @usuario }
-      else
-        format.html { render action: 'new' }
+      else 
+        format.html { render action: 'new', layout:'cliente'}
         format.json { render json: @usuario.errors, status: :unprocessable_entity }
       end
     end
@@ -41,12 +42,19 @@ class UsuariosController < ApplicationController
   # PATCH/PUT /usuarios/1
   # PATCH/PUT /usuarios/1.json
   def update
+
+    usuario = Usuario.find(session[:current_user_id])
+    unless usuario.cedula == "1020"
+      platilla = 'cliente'
+     else
+      platilla = 'application'
+    end
     respond_to do |format|
       if @usuario.update(usuario_params)
-        format.html { redirect_to @usuario, notice: 'Su datos se han acctualizado.' }
+        format.html { redirect_to '/signin', notice: 'Su datos se han acctualizado.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { render action: 'edit', layout:platilla }
         format.json { render json: @usuario.errors, status: :unprocessable_entity }
       end
     end

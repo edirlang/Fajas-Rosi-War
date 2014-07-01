@@ -8,11 +8,14 @@
 	        	<h3><%= producto.nombre %></h3>
 	        	<p>$ <%= producto.precio %></p>
 	        	<p>
-		        	<a href="#" class="btn btn-primary" role="button">Botón</a>
-		          	<a href="#" class="btn btn-default" role="button">Botón</a>
+		        	<div class="btn btn-primary">
+		        		<span class="glyphicon glyphicon-shopping-cart" ></span>
+		        		<%= link_to  "Comprar", :action => :comprar%>
+		        	</div>
 	        	</p>
 	      	</div>
     	</div>
   	</div>
   	<%end%>
+		        	.
 </div>

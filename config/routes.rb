@@ -21,6 +21,7 @@ RailsApp::Application.routes.draw do
 
   #Controlador cliente
   get "MiCuenta/edit" => 'cliente#edit'
+  get "comprar" => 'cliente#comprar'
   get "cliente" => 'cliente#index'
   get "MisProductos" => 'cliente#MisProductos'
   get "MiCuenta" => 'cliente#MiCuenta'
